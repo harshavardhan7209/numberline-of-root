@@ -20,15 +20,15 @@ public class app {
 							d.add(Integer.toString((int)(Math.sqrt(i))));
 							m = (int)(Math.sqrt(i));
 						}else{
-	                        d.add("√" + i);
-	                        m = i;
+	                                             d.add("√" + i);
+	                                             m = i;
 						}
 						if (Math.round(Math.sqrt(j)) == Math.sqrt(j)) {
 							d.add(Integer.toString((int)(Math.sqrt(j))));
 							z = (int)(Math.sqrt(j));
 						}else{
-	                        d.add("√" + j);
-	                        z = j;
+							d.add("√" + j);
+	                                                z = j;
 						}
 						int zc = (m+z)*1;
 						zd.add(m);
@@ -52,7 +52,9 @@ public class app {
 			for(int i=0;i<e.size();i++) {
 				if (za == e.get(i)) {
 					if (h.get(i).get(1) == 0) {
-						System.out.println("The recommended trick is that use base directly as:\n " + h.get(i).get(0) + " units.");
+						if (Math.round(Math.sqrt(h.get(i).get(0))) == Math.sqrt(h.get(i).get(0))) {
+							System.out.println("The recommended trick is that use base directly as:\n " + h.get(i).get(0) + " units.");
+						}
 					}else {
 						System.out.println("The recommended side values are: (" + g.get(i).get(0) + ", " + g.get(i).get(1) + ")");
 					}				
@@ -62,7 +64,9 @@ public class app {
 			for(int i=0;i<e.size();i++) {
 				if (za == e.get(i)) {
 					if (h.get(i).get(1) == 0) {
-						System.out.println("The recommended trick is that use base directly as:\n " + h.get(i).get(0) + " units.");
+						if (Math.round(Math.sqrt(h.get(i).get(0))) == Math.sqrt(h.get(i).get(0))) {
+							System.out.println("The recommended trick is that use base directly as:\n " + h.get(i).get(0) + " units.");
+						}
 					}else {
 						System.out.println("The recommended side values are: (" + g.get(i).get(0) + ", " + g.get(i).get(1) + ")");
 					}
