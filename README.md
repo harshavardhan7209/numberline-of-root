@@ -1,6 +1,15 @@
 # This app tells you the calculations of what should be the base and height for the hypotenuse
-To run this file:
-This is only for the first time:
+If your using another ide (other than BlueJ):
+1. Go to that ide and create a new project.
+2. Go to abcd and click app.java.
+3. Click the raw button .
+4. It will redirect you to a page.
+5. Select all the text in that page and copy it and paste it in your ide's java file.
+6. Run this file by clicking the run button.
+
+
+To run this file for the first time:
+This is only for the first time and if you use BlueJ:
 1. Make sure you have java and an ide(like bluej) installed.
 2. Go to https://github.com/harshavardhan7209/numberline-of-root.
 3. There you will find a "Code" Button which is green in colour.
