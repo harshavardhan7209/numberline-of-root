@@ -1,17 +1,22 @@
 # This app tells you the calculations of what should be the base and height for the hypotenuse
 To run this file:
 This is only for the first time:
-     1. Make sure you have java and an ide(like bluej) installed.
-     2. Go to https://github.com/harshavardhan7209/numberline-of-root.
-     3. There you will find a Code Button which is green in colour.
-     4. Click that button and you will find a downlaod as zip option.
-     5. Click that option.
-     6. After that extract the file:
-     7. If your in windows:
-          1. Click on the files and goto numberline-of-root-main folder.
-          2. Then you'll find a folder named abcd.
-          3. Right click on that folder and select the copy option.
-          4. And when your in your desired folder press Ctrl+v or right click and select paste.
+1. Make sure you have java and an ide(like bluej) installed.
+2. Go to https://github.com/harshavardhan7209/numberline-of-root.
+3. There you will find a Code Button which is green in colour.
+4. Click that button and you will find a downlaod as zip option.
+5. Click that option.
+6. After that extract the file:
+7. If your in windows:
+      1. Click on the files and goto numberline-of-root-main folder.
+      2. Then you'll find a folder named abcd.
+      3. Right click on that folder and select the copy option.
+      4. And when your in your desired folder press Ctrl+v or right click and select paste.
+
+
+
+
+
 8. Open Blue J.
 9. Select the project button and then click open project.
 10. Goto the folder that you saved "abcd" in and select abcd.
