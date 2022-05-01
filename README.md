@@ -1,4 +1,4 @@
-# This app tells you the calculations of what should be the base and height for the hypotenuse
+# This app tells you the calculations of what should be the base and height for the given hypotenuse
 If your using another ide (other than BlueJ):
 1. Go to that ide and create a new project.
 2. Go to abcd and click app.java.
