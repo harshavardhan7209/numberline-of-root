@@ -20,15 +20,15 @@ public class app {
 							d.add(Integer.toString((int)(Math.sqrt(i))));
 							m = (int)(Math.sqrt(i));
 						}else{
-	                                             d.add("√" + i);
-	                                             m = i;
+				d.add("√" + i);
+	                        m = i;
 						}
 						if (Math.round(Math.sqrt(j)) == Math.sqrt(j)) {
 							d.add(Integer.toString((int)(Math.sqrt(j))));
 							z = (int)(Math.sqrt(j));
 						}else{
-							d.add("√" + j);
-	                                                z = j;
+				d.add("√" + j);
+	                        z = j;
 						}
 						int zc = (m+z)*1;
 						zd.add(m);
