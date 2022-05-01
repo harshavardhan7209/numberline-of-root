@@ -3,8 +3,8 @@ To run this file:
 This is only for the first time:
 1. Make sure you have java and an ide(like bluej) installed.
 2. Go to https://github.com/harshavardhan7209/numberline-of-root.
-3. There you will find a Code Button which is green in colour.
-4. Click that button and you will find a downlaod as zip option.
+3. There you will find a "Code" Button which is green in colour.
+4. Click that button and you will find a "downlaod as zip option".
 5. Click that option.
 6. After that extract the file:
 7. If your in windows:
