@@ -1,5 +1,5 @@
 import java.util.*;
-public class test {
+public class app {
 	public static void main(String[] args) {
 
 		List<Integer> e = new ArrayList<Integer>();
