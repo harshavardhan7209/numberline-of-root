@@ -4,15 +4,15 @@ import java.util.*;
 public class app {
     public static void main(String[] args) {
         while (true) {
-            cnap();
+            canap();
         }
     }
-    public static void cnap() {
+    public static void canap() {
         List<Integer> e = new ArrayList<Integer>();
         List<ArrayList<String>> g = new ArrayList<ArrayList<String>>();
         List<ArrayList<Integer>> h = new ArrayList<ArrayList<Integer>>();
         Scanner x = new Scanner(System.in);
-        System.out.print("Enter the hypotenuse: √");
+        System.out.print("Enter the hypotenuse: \u221A");
         double a = x.nextDouble();
         System.out.print("Do you want to see: \n1.All the results or \n2.The recommended result\n: ");
         int zb = x.nextInt();
@@ -27,14 +27,14 @@ public class app {
                             d.add(Integer.toString((int)(Math.sqrt(i))));
                             m = (int)(Math.sqrt(i));
                         }else{
-                            d.add("√" + i);
+                            d.add("\u221A" + i);
                             m = i;
                         }
                         if (Math.round(Math.sqrt(j)) == Math.sqrt(j)) {
                             d.add(Integer.toString((int)(Math.sqrt(j))));
                             z = (int)(Math.sqrt(j));
                         }else{
-                            d.add("√" + j);
+                            d.add("\u221A" + j);
                             z = j;
                         }
                         int zc = (m+z)*1;
