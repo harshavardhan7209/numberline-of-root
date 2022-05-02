@@ -4,10 +4,10 @@ import java.util.*;
 public class app {
     public static void main(String[] args) {
         while (true) {
-            canap();
+            cnap();
         }
     }
-    public static void canap() {
+    public static void cnap() {
         List<Integer> e = new ArrayList<Integer>();
         List<ArrayList<String>> g = new ArrayList<ArrayList<String>>();
         List<ArrayList<Integer>> h = new ArrayList<ArrayList<Integer>>();
