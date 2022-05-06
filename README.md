@@ -1,5 +1,6 @@
 # This app tells you the calculations of what should be the base and height for the given hypotenuse
-How to run this app:
+How to run this app:  
+MAKE SURE THAT YOU HAVE JAVA INSTALLED IN YOUR SYSTEM
 1. Download all the files from https://github.com/harshavardhan7209/numberline-of-root.
 2. By clicking on the green "code" button and selecting download as zip.
 3. Then extract the zip files.
