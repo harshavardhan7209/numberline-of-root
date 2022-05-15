@@ -1,21 +1,57 @@
-package egproject;
-
 import java.util.*;
 public class app {
     public static void main(String[] args) {
         while (true) {
-            canap();
+            List<Integer> m = new ArrayList<Integer>();
+            List<String> mn = new ArrayList<String>();
+            Scanner x = new Scanner(System.in);
+            System.out.print("Enter the hypotenuse: \u221A");
+            Double y = x.nextDouble();
+            List<Integer> l = new ArrayList<Integer>();
+            l = numberline(y);
+            if (l.get(1)!=0) {
+                if (Math.round(Math.sqrt(l.get(0))) == Math.sqrt(l.get(0))) {
+                    mn.add(Integer.toString((int)Math.sqrt(l.get(0))));
+                }else {
+                    mn.add("\u221A" + l.get(0));
+                }
+                if (Math.round(Math.sqrt(l.get(1))) == Math.sqrt(l.get(1))) {
+                    mn.add(Integer.toString((int)Math.sqrt(l.get(1))));
+                }else {
+                    mn.add("\u221A" + l.get(1));
+                }
+                System.out.println("The altitude and base respectively for \u221A" + y.intValue() + " are: " + mn);
+            }else {
+                System.out.println("The altitude is: 0 and the base is: " + l.get(0));
+            }
+            if (l.get(1)!=0) {
+                for (int i = 0; i < l.size(); i++) {
+                    while (Math.round(Math.sqrt(l.get(i))) != Math.sqrt(l.get(i))) {
+                        List<String> no = new ArrayList<String>();
+                        m = numberline(l.get(i));
+                        if (Math.round(Math.sqrt(m.get(0))) == Math.sqrt(m.get(0))) {
+                            no.add(Integer.toString((int)Math.sqrt(m.get(0))));
+                        }else {
+                            no.add("\u221A" + m.get(0));
+                        }
+                        if (Math.round(Math.sqrt(m.get(1))) == Math.sqrt(m.get(1))) {
+                            no.add(Integer.toString((int)Math.sqrt(l.get(1))));
+                        }else {
+                            no.add("\u221A" + m.get(1));
+                        }
+                        System.out.println("The altitude and base respectively for \u221A" + l.get(i).intValue() + " are: " + no);
+                        l = m;
+                    }
+                }
+            }
         }
     }
-    public static void canap() {
+    public static List<Integer> numberline(double a) {
+        int abcd = 0, efgh = 0;
         List<Integer> e = new ArrayList<Integer>();
         List<ArrayList<String>> g = new ArrayList<ArrayList<String>>();
         List<ArrayList<Integer>> h = new ArrayList<ArrayList<Integer>>();
-        Scanner x = new Scanner(System.in);
-        System.out.print("Enter the hypotenuse: \u221A");
-        double a = x.nextDouble();
-        System.out.print("Do you want to see: \n1.All the results or \n2.The recommended result\n: ");
-        int zb = x.nextInt();
+        
         for (int i=0;i<(a+1);i++) {
             for (int j=0;j<(i+1);j++) {
                 if (i+j==a) {
@@ -51,35 +87,20 @@ public class app {
         for (int i=0;i<g.size();i++) {
             za = Math.min(za, e.get(i));
         }
-        if(zb == 1) {
-            System.out.println("The possible sides of this right triangle are: ");
-            for (int i=0;i<g.size();i++) {
-                System.out.println("(" + g.get(i).get(0) + ", " + g.get(i).get(1) + ")");
-            }
-            for(int i=0;i<e.size();i++) {
-                if (za == e.get(i)) {
-                    if (h.get(i).get(1) == 0){
-                        if (Math.round(Math.sqrt(h.get(i).get(0))) == Math.sqrt(h.get(i).get(0))) {
-                            System.out.println("The recommended trick is that use base directly as:\n " + (int)(Math.sqrt(h.get(i).get(0))) + " units.");
-                        }
-                    }else {
-                        System.out.println("The recommended side values are: (" + g.get(i).get(0) + ", " + g.get(i).get(1) + ")");
-                    }               
-                }
-            }
-        }else {
-            for(int i=0;i<e.size();i++) {
-                if (za == e.get(i)) {
-                    if (h.get(i).get(1) == 0) {
-                        if (Math.round(Math.sqrt(h.get(i).get(0))) == Math.sqrt(h.get(i).get(0))) {
-                            System.out.println("The recommended trick is that use base directly as:\n " + (int)(Math.sqrt(h.get(i).get(0))) + " units.");
-                        }
-                    }else {
-                        System.out.println("The recommended side values are: (" + g.get(i).get(0) + ", " + g.get(i).get(1) + ")");
+        for(int i=0;i<e.size();i++) {
+            if (za == e.get(i)) {
+                if (h.get(i).get(1) == 0) {
+                    if (Math.round(Math.sqrt(h.get(i).get(0))) == Math.sqrt(h.get(i).get(0))) {
+                        abcd = ((int)(Math.sqrt(h.get(i).get(0))));
+                        efgh = 0;
                     }
+                }else {
+                    abcd = (h.get(i).get(0));
+                    efgh = (h.get(i).get(1));
+                    
                 }
             }
         }
+       return Arrays.asList(abcd,efgh);
     }
 }
-
