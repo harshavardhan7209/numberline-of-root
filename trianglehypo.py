@@ -1,6 +1,5 @@
 import math
 
-from numpy import mat
 def numberline(a):
     aeh = []
     f = []
