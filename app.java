@@ -9,39 +9,27 @@ public class app {
             Double y = x.nextDouble();
             List<Integer> l = new ArrayList<Integer>();
             l = numberline(y);
-            if (l.get(1)!=0) {
-                if (Math.round(Math.sqrt(l.get(0))) == Math.sqrt(l.get(0))) {
-                    mn.add(Integer.toString((int)Math.sqrt(l.get(0))));
+            for (int j = 0; j <l.size(); j++) {
+                if (Math.round(Math.sqrt(l.get(j))) == Math.sqrt(l.get(j))) {
+                    mn.add(Integer.toString((int)Math.sqrt(l.get(j))));
                 }else {
-                    mn.add("\u221A" + l.get(0));
+                    mn.add("\u221A" + l.get(j));
                 }
-                if (Math.round(Math.sqrt(l.get(1))) == Math.sqrt(l.get(1))) {
-                    mn.add(Integer.toString((int)Math.sqrt(l.get(1))));
-                }else {
-                    mn.add("\u221A" + l.get(1));
-                }
-                System.out.println("The altitude and base respectively for \u221A" + y.intValue() + " are: " + mn);
-            }else {
-                System.out.println("The altitude is: 0 and the base is: " + l.get(0));
             }
-            if (l.get(1)!=0) {
-                for (int i = 0; i < l.size(); i++) {
-                    while (Math.round(Math.sqrt(l.get(i))) != Math.sqrt(l.get(i))) {
-                        List<String> no = new ArrayList<String>();
-                        m = numberline(l.get(i));
-                        if (Math.round(Math.sqrt(m.get(0))) == Math.sqrt(m.get(0))) {
-                            no.add(Integer.toString((int)Math.sqrt(m.get(0))));
+            System.out.println("The altitude and base respectively for \u221A" + y.intValue() + " are: " + mn);
+            for (int i = 0; i < l.size(); i++) {
+                while (Math.round(Math.sqrt(l.get(i))) != Math.sqrt(l.get(i))) {
+                    List<String> no = new ArrayList<String>();
+                    m = numberline(l.get(i));
+                    for (int j = 0; j <m.size(); j++) {
+                        if (Math.round(Math.sqrt(m.get(j))) == Math.sqrt(m.get(j))) {
+                            no.add(Integer.toString((int)Math.sqrt(m.get(j))));
                         }else {
-                            no.add("\u221A" + m.get(0));
+                            no.add("\u221A" + m.get(j));
                         }
-                        if (Math.round(Math.sqrt(m.get(1))) == Math.sqrt(m.get(1))) {
-                            no.add(Integer.toString((int)Math.sqrt(l.get(1))));
-                        }else {
-                            no.add("\u221A" + m.get(1));
-                        }
-                        System.out.println("The altitude and base respectively for \u221A" + l.get(i).intValue() + " are: " + no);
-                        l = m;
                     }
+                    System.out.println("The altitude and base respectively for \u221A" + l.get(i).intValue() + " are: " + no);
+                    l = m;
                 }
             }
         }
@@ -49,56 +37,38 @@ public class app {
     public static List<Integer> numberline(double a) {
         int abcd = 0, efgh = 0;
         List<Integer> e = new ArrayList<Integer>();
-        List<ArrayList<String>> g = new ArrayList<ArrayList<String>>();
         List<ArrayList<Integer>> h = new ArrayList<ArrayList<Integer>>();
-        
         for (int i=0;i<(a+1);i++) {
             for (int j=0;j<(i+1);j++) {
                 if (i+j==a) {
                     int m,z;
-                    if ((Math.round(Math.sqrt(i)) == Math.sqrt(i)) || (Math.round(Math.sqrt(j)) == Math.sqrt(j))) {
-                        ArrayList<String> d = new ArrayList<String>();
-                        ArrayList<Integer> zd = new ArrayList<Integer>();
-                        if (Math.round(Math.sqrt(i)) == Math.sqrt(i)) {
-                            d.add(Integer.toString((int)(Math.sqrt(i))));
-                            m = (int)(Math.sqrt(i));
-                        }else{
-                            d.add("\u221A" + i);
-                            m = i;
-                        }
-                        if (Math.round(Math.sqrt(j)) == Math.sqrt(j)) {
-                            d.add(Integer.toString((int)(Math.sqrt(j))));
-                            z = (int)(Math.sqrt(j));
-                        }else{
-                            d.add("\u221A" + j);
-                            z = j;
-                        }
-                        int zc = (m+z)*1;
-                        zd.add(i);
-                        zd.add(j);
-                        g.add(d);
-                        e.add(zc);
-                        h.add(zd);
+                    ArrayList<Integer> zd = new ArrayList<Integer>();
+                    if (Math.round(Math.sqrt(i)) == Math.sqrt(i)) {
+                        m = (int)(Math.sqrt(i));
+                    }else{
+                        m = i;
                     }
+                    if (Math.round(Math.sqrt(j)) == Math.sqrt(j)) {
+                        z = (int)(Math.sqrt(j));
+                    }else{
+                        z = j;
+                    }
+                    int zc = (m+z)*1;
+                    zd.add(i);
+                    zd.add(j);
+                    e.add(zc);
+                    h.add(zd);
                 }
             }
         }
         int za = e.get(0);
-        for (int i=0;i<g.size();i++) {
+        for (int i=0;i<h.size();i++) {
             za = Math.min(za, e.get(i));
         }
-        for(int i=0;i<e.size();i++) {
+        for(int i=0;i<h.size();i++) {
             if (za == e.get(i)) {
-                if (h.get(i).get(1) == 0) {
-                    if (Math.round(Math.sqrt(h.get(i).get(0))) == Math.sqrt(h.get(i).get(0))) {
-                        abcd = ((int)(Math.sqrt(h.get(i).get(0))));
-                        efgh = 0;
-                    }
-                }else {
-                    abcd = (h.get(i).get(0));
-                    efgh = (h.get(i).get(1));
-                    
-                }
+                abcd = (h.get(i).get(0));
+                efgh = (h.get(i).get(1));
             }
         }
        return Arrays.asList(abcd,efgh);
