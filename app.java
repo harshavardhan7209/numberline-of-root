@@ -8,7 +8,8 @@ public class app {
             System.out.print("Enter the hypotenuse: \u221A");
             Long y = x.nextLong();
             List<Long> l = new ArrayList<Long>();
-            l = {y,0};
+            l.add(y);
+            l.add((long)0);
             for (int i = 0; i < l.size(); i++) {
                 while (Math.round(Math.sqrt(l.get(i))) != Math.sqrt(l.get(i))) {
                     List<String> no = new ArrayList<String>();
