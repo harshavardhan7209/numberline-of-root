@@ -1,29 +1,21 @@
 import java.util.*;
 public class app {
-    public static void main(String[] args) {
+    public static void main(String [] args) {
         while (true) {
-            List<Integer> m = new ArrayList<Integer>();
+            List<Long> m = new ArrayList<Long>();
             List<String> mn = new ArrayList<String>();
             Scanner x = new Scanner(System.in);
             System.out.print("Enter the hypotenuse: \u221A");
-            Double y = x.nextDouble();
-            List<Integer> l = new ArrayList<Integer>();
-            l = numberline(y);
-            for (int j = 0; j <l.size(); j++) {
-                if (Math.round(Math.sqrt(l.get(j))) == Math.sqrt(l.get(j))) {
-                    mn.add(Integer.toString((int)Math.sqrt(l.get(j))));
-                }else {
-                    mn.add("\u221A" + l.get(j));
-                }
-            }
-            System.out.println("The altitude and base respectively for \u221A" + y.intValue() + " are: " + mn);
+            Long y = x.nextLong();
+            List<Long> l = new ArrayList<Long>();
+            l = {y,0};
             for (int i = 0; i < l.size(); i++) {
                 while (Math.round(Math.sqrt(l.get(i))) != Math.sqrt(l.get(i))) {
                     List<String> no = new ArrayList<String>();
                     m = numberline(l.get(i));
                     for (int j = 0; j <m.size(); j++) {
                         if (Math.round(Math.sqrt(m.get(j))) == Math.sqrt(m.get(j))) {
-                            no.add(Integer.toString((int)Math.sqrt(m.get(j))));
+                            no.add(Long.toString((long)Math.sqrt(m.get(j))));
                         }else {
                             no.add("\u221A" + m.get(j));
                         }
@@ -34,26 +26,26 @@ public class app {
             }
         }
     }
-    public static List<Integer> numberline(double a) {
-        int abcd = 0, efgh = 0;
-        List<Integer> e = new ArrayList<Integer>();
-        List<ArrayList<Integer>> h = new ArrayList<ArrayList<Integer>>();
-        for (int i=0;i<(a+1);i++) {
-            for (int j=0;j<(i+1);j++) {
+    public static List<Long> numberline(long a) {
+        long abcd = 0, efgh = 0, za, zc;
+        List<Long> e = new ArrayList<Long>();
+        List<ArrayList<Long>> h = new ArrayList<ArrayList<Long>>();
+        for (long i=0;i<(a+1);i++) {
+            for (long j=0;j<(i+1);j++) {
                 if (i+j==a) {
-                    int m,z;
-                    ArrayList<Integer> zd = new ArrayList<Integer>();
+                    long m,z;
+                    ArrayList<Long> zd = new ArrayList<Long>();
                     if (Math.round(Math.sqrt(i)) == Math.sqrt(i)) {
-                        m = (int)(Math.sqrt(i));
+                        m = (long)(Math.sqrt(i));
                     }else{
                         m = i;
                     }
                     if (Math.round(Math.sqrt(j)) == Math.sqrt(j)) {
-                        z = (int)(Math.sqrt(j));
+                        z = (long)(Math.sqrt(j));
                     }else{
                         z = j;
                     }
-                    int zc = (m+z)*1;
+                    zc = (m+z)*1;
                     zd.add(i);
                     zd.add(j);
                     e.add(zc);
@@ -61,7 +53,7 @@ public class app {
                 }
             }
         }
-        int za = e.get(0);
+        za = e.get(0);
         for (int i=0;i<h.size();i++) {
             za = Math.min(za, e.get(i));
         }
